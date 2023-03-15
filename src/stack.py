@@ -32,7 +32,9 @@ class Stack:
 
         :return: данные удаленного элемента
         """
-        value = self.top.data
-        self.top = self.top.next_node
-
-        return value
+        if self.top == None:
+            raise Exception("Стек пустой")
+        else:
+            value = self.top.data
+            self.top = self.top.next_node
+            return value

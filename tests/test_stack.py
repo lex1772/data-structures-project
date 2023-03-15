@@ -2,6 +2,7 @@
 import unittest
 from src.stack import Node, Stack
 
+
 class TestSrc(unittest.TestCase):
     def test_node_init(self):
         n1 = Node(5, None)
