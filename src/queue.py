@@ -31,7 +31,7 @@ class Queue:
         if self.size == 0:
             self.head = tmp
         else:
-            self.tail.next = tmp
+            self.tail.next_node = tmp
         self.tail = tmp
         self.size += 1
         self.list_of_data.append(data)
@@ -46,7 +46,7 @@ class Queue:
         if self.size == 0:
             raise AttributeError("Очередь пустая")
         result = self.head.data
-        self.head = self.head.next
+        self.head = self.head.next_node
         self.size -= 1
         if self.size == 0:
             self.tail = None
