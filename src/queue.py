@@ -36,19 +36,18 @@ class Queue:
         self.size += 1
         self.list_of_data.append(data)
 
-
     def dequeue(self):
         """
         Метод для удаления элемента из очереди. Возвращает данные удаленного элемента
 
         :return: данные удаленного элемента
         """
-        if self.size == 0:
-            raise AttributeError("Очередь пустая")
+        if self.head is None:
+            return None
         result = self.head.data
         self.head = self.head.next_node
         self.size -= 1
-        if self.size == 0:
+        if self.head is None:
             self.tail = None
         return result
 
