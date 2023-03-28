@@ -46,4 +46,4 @@ class LinkedList:
             node = node.next_node
 
         ll_string += ' None'
-        return ll_string
+        return ll_string.lstrip()
