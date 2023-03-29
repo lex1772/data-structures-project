@@ -16,14 +16,11 @@ class TestSrc(unittest.TestCase):
         self.assertEqual(str(ll), "{'id': 0} -> {'id': 1} -> None")
 
 
-    def insert_at_end(self):
+    def test_insert_at_end(self):
         l = LinkedList()
         l.insert_at_end({'id': 2})
-        self.assertEqual(str(l.head), "{'id': 2}")
+        self.assertEqual(str(l), "{'id': 2} -> None")
         l.insert_beginning({'id': 1})
         l.insert_beginning({'id': 0})
-        l.insert_at_end({'id': 2})
-        self.assertEqual(str(l), "{'id': 0} -> {'id': 1} -> {'id': 2} -> None")
-        self.assertEqual(str(l.end), "{'id': 2}")
         l.insert_at_end({'id': 3})
         self.assertEqual(str(l), "{'id': 0} -> {'id': 1} -> {'id': 2} -> {'id': 3} -> None")
